@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before, *::after {
+    content: "";
+    display: table;
+}
+
+*::after {
+    clear: both;
+}
+
+.board-games {
+    height: 100vh;
+
+    // ----- 01. vertical center content using absolute position, top and tranform -----
+    // position: relative;
+
+    // ----- 02. vertical center content using dispaly table -----
+    // display: table-cell;
+    // vertical-align: middle;
+
+    // ----- 03. vertical center content using display flex -----
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // ----- 04. vertical center content using display grid -----
+    // display: grid;
+    // place-items: center;
+
+    // ----- 05. vertical center content using margin -----
+    // display: grid;
+
+    &__container {
+        border: 3px solid #ACACAC;
+        width: 1170px;   
+        
+        // ----- 01. vertical center content using absolute position, top and tranform -----
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+
+        // ----- 05. vertical center content using margin -----
+        // margin: auto;
+    }
+
+    &__computer-field {
+        background-color: #48BE97;
+        height: 250px; 
+    }
+
+    &__announcement-board {
+        background-color: #fff;
+        height: 120px;
+    }
+
+    &__challenger-field {
+        background-color: #48BE97;
+        height: 250px;
+    }
+}
